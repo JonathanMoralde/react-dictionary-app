@@ -1,5 +1,4 @@
 import { Definition } from "@/app/app";
-import React from "react";
 
 type Props = { definition: Definition };
 

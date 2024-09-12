@@ -1,12 +1,7 @@
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import { Switch } from "@/components/ui/switch";
 import { Separator } from "@/components/ui/separator";
@@ -18,16 +13,14 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-import { Book, Moon, ChevronDown, Sun } from "lucide-react";
-import { Button } from "../ui/button";
+import { Book, Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Button } from "../ui/button";
 
 type Theme = "light" | "dark";
 type Font = "serif" | "sans-serif";
 
-type Props = {};
-
-const Header = (props: Props) => {
+const Header = () => {
   const [theme, setTheme] = useState<Theme>("light");
   const [font, setFont] = useState<Font>("serif");
 

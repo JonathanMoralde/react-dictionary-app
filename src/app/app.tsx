@@ -7,10 +7,8 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -26,8 +24,6 @@ import { useState } from "react";
 const formSchema = z.object({
   word: z.string(),
 });
-
-type Props = {};
 
 export interface WordData {
   license: License;
@@ -63,7 +59,7 @@ export interface Phonetic {
   license: License;
 }
 
-const Home = (props: Props) => {
+const Home = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
